@@ -1,0 +1,30 @@
+{
+  "name": "memebot2000",
+  "version": "1.0.0",
+  "description": "Converts iFunny URLs to their images and videos. No downloading the app PLZ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duper51/TelegramMemeBot.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "ifunny"
+  ],
+  "author": "Ian Otto (@duper51)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duper51/TelegramMemeBot/issues"
+  },
+  "homepage": "https://github.com/duper51/TelegramMemeBot#readme",
+  "dependencies": {
+    "bluebird": "latest",
+    "cheerio": "^1.0.0-rc.2",
+    "node-telegram-bot-api": "^0.30.0",
+    "request": "latest"
+  }
+}
