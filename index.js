@@ -32,7 +32,6 @@ function initBot(config) {
 
         const chatId = msg.chat.id;
         const resp = match[1]; // the captured "whatever"
-        bot.sendMessage(chatId, resp);
         let memeURL = "https://ifunny.co/fun/" + resp;
 
         request(memeURL, function (e, d, r) {
@@ -45,10 +44,8 @@ function initBot(config) {
             let possibleImage = $('.media__image');
             let possibleVideo = $("meta[property='og:video']");
             if(possibleVideo.length > 0) {
-                bot.sendMessage(chatId, "vid");
                 bot.sendMessage(chatId, possibleVideo.attr('content'));
             } else if(possibleImage.length > 0) {
-                bot.sendMessage(chatId, "img");
                 bot.sendMessage(chatId, possibleImage.attr('src'));
             } else {
                 bot.sendMessage(chatId, "I couldn't find a meme at that URL! Sorry!")
